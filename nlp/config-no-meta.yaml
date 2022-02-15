@@ -1,0 +1,95 @@
+# NOTE: Not all files listed below are given in the shared Google Drive as some 
+# represent intermediate results (metadata processing etc.). With the data from
+# Google Drive, you can reproduce the models. No further processing steps are 
+# necessary for you.
+
+# paths to caselaw access metadata
+citation_dict_fpaths: ['../utils/f3d.jsonl']
+# path to folder with full dataset as txt files
+case_coll_dir: ../data/case/
+# folder to be used to store all preprocessed cases
+preprocessed_dir: ../data/preprocessed-cached/
+# folder to be used to store all preprocessed test cases
+preprocessed_test_dir: ../data/preprocessed-cached/
+# text file with training set ids. one id per line
+train_ids_fpath: ../utils/updated_train_ids.txt
+# text file with test set ids. one id per line
+dev_ids_fpath: ../utils/updated_dev_ids.txt
+# like above, but smaller for debugging
+train_ids_small_fpath: ../utils/train_data_ids_small.txt
+# path and the prefix of six test data ids partitions for six-fold evaluation
+# Be aware that here only the common prefix for the test folds should be given
+test_ids_fpath_prefix: ../utils/test_data_ids
+# metadata file for cases
+meta_fpath:  ../utils/appeals_meta_wscraped.csv
+# path for vocabulary cache
+# NOTE: use the provided reduced vocabulary as the reduction takes a lot of time
+cv_path:  ../utils/raw_vocab.pkl
+# path for reduced vocabulary cache
+cv_norm_path:  ../utils/thresholded_vocab.pkl
+# output directory for logs + model
+output_dir: bilstm-full-idx-no-meta
+# path for checkpoint
+# If a checkpoint is given, the pipeline will try to load it
+# Be aware that you need different checkpoint paths for bilstm and roberta:
+# BILSTM: <output_dir>/bilstm/version_0/checkpoints/epoch=7.ckpt (changed to the specific checkpoint you want)
+# RoBERTA: <output_dir>/checkpoint-8 (changed to the specific checkpoint you want)
+load_checkpoint_path: NULL
+
+
+# pretrain_name is used to specify the pretrained tokenizer for both bilstm and roberta; and pretrained model name for roberta
+pretrain_name: roberta-base
+# model_type is either bilstm or roberta; when training the BiLSTM it might be necessary to interupt the training yourself after
+# a certain number of epochs.
+model_type: roberta
+# mode:
+#  bilstm: 'train' or 'test'
+#  roberta: 'train', 'test'/'analysis', 'eval' (measure performance on devset) or 'predict' (outputs the citation prediction for the input_text config entry)
+mode: train
+# set training task from
+#  1: cit_class [LEGACY]
+#    -predict the next citation index that appeared first in forecasting window
+#  2: cit_idx_predictions
+#    -predict the next citation class(regulations, code, case) that appeared first in forecasting window
+#  3: binary_task [LEGACY]
+#    - whether there will be a citation in the forecasting window
+# [LEGACY]: Methods which where tested, but not used in the final paper. In addition to those two legacy tasks,
+#   there are also other tasks which are supported by the CitationPredictionDataset. In any case, the processing
+#   pipeline needs to be altered (mainly the evaluation code) to use them.
+task: cit_idx_predictions
+# This file is used to save information about RoBERTa during `test` or  `analysis` which can then be analyzed
+# To see which information is written please have a look at the code in `roberta.py` using this file.
+prediction_analysis_file: NULL
+# save out judge embeddings
+judge_embedding_export_file: NULL
+
+# batch_size of 128 with gradient accumulation step 4 are used for BiLSTM on tesla_P100
+# batch_size of 192 with gradient accumulation step 3 are used for RoBERTa on tesla_P100
+batch_size: 128
+#number of steps to accumulate the gradients and then using the accumulated gradients to compute the variable updates
+gradient_accumulation_steps:  4
+#learning rate, we used learning rate of 1e-4 for both BiLSTM and RoBERTa
+learning_rate: 1e-4
+
+# context_length and forecast window length are for ablations studies, both set to 64 by default
+context_length: 64
+forecast_length: 64
+
+
+# whether append metadata before classification
+# Be aware that the current code only supports enabling year, issarea and judge at the same time.
+# To test the training with metadata set add_case_meta and all other attributes to True
+add_case_meta: False
+# whether use the year metadata
+enable_meta_year: False
+# whether use the issue area code metadata
+enable_meta_issarea:  False
+# whether use the judge metadata
+enable_meta_judge: False
+
+
+# the following two entries are for customize input, make sure to set mode to test to enable this function
+# leave unused metadata to be -1, and make sure the format is a string separated by comma
+input_meta: '-1,-1,-1'
+# if not used, make sure to set input_text as null
+input_text: null

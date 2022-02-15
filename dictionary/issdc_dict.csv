@@ -1,0 +1,23 @@
+issdc,issdc_label
+1,Allowed (Board Code)
+3,Remanded (Board Code)
+4,Denied (Board Code)
+5,Vacated (Board Code)
+6,Dismissed/Withdrawn (Board Code)
+8,Dismissed Death (Board Code)
+9,Withdrawn (Obsolete Board Code, no longer used)
+A,Adv Allowed in Field (VBA Code)
+B,Benefits granted on Remand (VBA Code)
+D,Designation of Record (DOR) (Board Code)
+E,"Death, Field (VBA Code)"
+F,"Withdrawn, Field (VBA Code)"
+G,Closed for Failure to Submit Form 9 (VBA Code)
+L,Manlincon New Issue (Field) (VBA Code)
+M,Merged Appeal (Board Code)
+P,RAMP Withdraw (VBA Code)
+R,Reconsideration by Letter (Board Code)
+S,Stay (Board Code)
+U,Motion to Vacate Denied (Board Code)
+V,Motion to Vacate Withdrawn (Board Code)
+W,Withdrawn on Remand (VBA Code)
+X,Failure to Respond on Remand (VBA Code)

@@ -1,0 +1,82 @@
+# paths to caselaw access metadata. can be found in shared Google Drive
+citation_dict_fpaths: ['../utils/f3d.jsonl']
+# path to folder with full dataset as txt files
+case_coll_dir: ../data/case/
+# folder to be used to store all preprocessed cases
+preprocessed_dir: ../../../data/bva/preprocessed-cached
+# folder to be used to store all preprocessed test cases
+preprocessed_test_dir: ../../../data/bva/preprocessed-cached
+# text file with training set ids. one id per line
+train_ids_fpath: ../../../data/bva/utils/updated_train_ids.txt
+# text file with test set ids. one id per line
+dev_ids_fpath: ../../../data/bva/utils/updated_dev_ids.txt
+# like above, but smaller for debugging
+train_ids_small_fpath: ../utils/train_data_ids_small.txt
+# path and the prefix of six test data ids partitions for six-fold evaluation
+test_ids_fpath_prefix: ../../../data/bva/utils/test_data_ids
+#test_ids_fpath_prefix: ../../../data/bva/utils/mini-test/test_data_ids
+
+# metadata file for cases
+meta_fpath: ../../../data/bva/utils/appeals_meta_wscraped.csv
+# path for vocabulary cache
+cv_path:  ../../../data/bva/vocab/raw_vocab.pkl
+# path for reduced vocabulary cache
+cv_norm_path:  ../../../data/bva/vocab/thresholded_vocab.pkl
+# output directory for logs
+output_dir: roberta-full-idx-all-meta
+# path for checkpoint
+#load_checkpoint_path: ../../../data/bva/checkpoints/roberta-checkpoints_roberta-idx-all-meta-f128-c128_checkpoint-3240
+load_checkpoint_path: ../../../data/bva/checkpoints/roberta-idx-all-meta-f128-c256_checkpoint-49005
+
+
+# pretrain_name is used to specify the pretrained tokenizer for both bilstm and roberta; and pretrained model name for roberta
+pretrain_name: roberta-base
+# model_type is either bilstm or roberta
+model_type: roberta
+# mode can be:
+# 'train' : train model
+# 'test' : evaluate model on test data, optionally exporting metrics and data
+# 'analysis' : evaluate model on validation data and export metrics and instances
+mode: analysis
+# set training task from
+#  1: cit_class
+#    -predict the next citation index that appeared first in forecasting window
+#  2: cit_idx_predictions
+#    -predict the next citation class(regulations, code, case) that appeared first in forecasting window
+#  3: binary_task
+#    - whether there will be a citation in the forecasting window
+task: cit_idx_predictions
+#test_predictions_log_file: ../../../data/bva/logs/roberta-idx-all-meta-f128-c128_checkpoint-3240.csv
+predictions_analysis_file: ../../../data/bva/logs/roberta-idx-all-meta-f128-c256_checkpoint-49005_prediction_stats.csv
+#context_instances_export_file: ../../../data/bva/logs/roberta-idx-all-meta-f128-c256_checkpoint-49005_run_instances.txt
+# save out judge embeddings
+#judge_embedding_export_file: ../../../data/bva/checkpoints/roberta-idx-all-meta-f128-c256_checkpoint-49005-judge-emb
+judge_embedding_export_file: null
+
+# batch_size of 128 with gradient accumulation step 4 are used for BiLSTM on tesla_P100
+# batch_size of 192 with gradient accumulation step 3 are used for RoBERTa on tesla_P100
+batch_size: 128
+#number of steps to accumulate the gradients and then using the accumulated gradients to compute the variable updates
+gradient_accumulation_steps:  4
+#learning rate, we used learning rate of 1e-4 for both BiLSTM and RoBERTa
+learning_rate: 1e-4
+
+# context_length and forecast window length are for ablations studies, both set to 64 by default
+context_length: 256
+forecast_length: 128
+
+# whether append metadata before classification
+add_case_meta: True
+# whether use the year metadata
+enable_meta_year: True
+# whether use the issue area code metadata
+enable_meta_issarea:  True
+# whether use the judge metadata
+enable_meta_judge: True
+
+
+# the following two entries are for customize input, make sure to set mode to test to enable this function
+# leave unused metadata to be -1, and make sure the format is a string separated by comma
+input_meta: '-1,-1,-1'
+# if not used, make sure to set input_text as null
+input_text: null

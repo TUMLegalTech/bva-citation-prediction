@@ -1,0 +1,48 @@
+﻿• Thun v. Peake, 22 Vet.App. 111 (2009)
+    ◦ Case Date: April 23, 2008
+    ◦ This is likely a very interesting case for study. I do not know how fast it got cited, but it became near-ubiquitous in increased rating (IR) claims eventually. Its use then plummeted following a Board training conducted in August 2017, which advised against its use.
+
+• Rice v Shinseki, 22 Vet.App. 447 (2009)
+    ◦ Case Date: May 6, 2009
+    ◦ Applies only in TDIU cases. Board disposition data shows a significant increase in the remand rate of TDIU issues in October 2009, likely related to Rice. See Misunderstanding Chenery article for brief discussion of this. This may be an example of a fast-uptake case.
+
+• Correia v. McDonald, 28 Vet.App. 158 (2016)
+    ◦ Case Date: July 5, 2016
+    ◦ Applies to IR claims for musculoskeletal disabilities. Board disposition data shows significant increase in the remand rate for IR musculoskeletal issues in July 2016, likely related to Correia. This may be an example of a fast-uptake case.
+
+• Scott v. McDonald, 789 F.3d 1375 (Fed. Cir. 2015)
+    ◦ Case Date: June 18, 2015
+    ◦ Case likely did not initially get much attention, so I expect uptake rate would be low for a while. It slowly started to gain traction with the Board, resulting in me issuing guidance on how to approach it twice. Those guidance emails were dated July 31, 2017, and December 8, 2017. I also gave a training to judges which discussed proper use of Scott in May 2017 (precise day unknown). This may be an example of a slow uptake case, which then accelerated at some point in 2016 or 2017.
+
+• Johnson v. McDonald, 762 F.3d 1362 (Fed. Cir. 2014)
+    ◦ Case Date: August 6, 2014
+    ◦ This is an interesting case that for a time became a companion case (and cite) to Thun. However, it was on a slightly different aspect of the regulation, and therefore stood independently. This case would be interesting to examine as Thun was already in heavy use by the time Johnson came around, and so it may have been taken up more quickly just due to general awareness of Thun. However, the regulation that was the basis of Johnson was changed effective December 8, 2017, effectively eliminating Johnson. So, an analysis of Johnson would also look to the speed of the decline in citations to it following the reg change.
+
+• PTSD Rating Cases
+    ◦ The following cases are common issues in IR mental disorder cases. They are a frequent cause of problems for the Board, so it may be that they are cited a lot, or not cited much (because they should be but aren’t).
+    ◦ Mauerhan v. Principi, 16 Vet.App. 436 (2002)
+        ▪ Case Date: 16 Vet.App. 436
+    ◦ Vazquez-Claudio v. Shinseki, 713 F.3d 112 (Fed. Cir. 2013)
+        ▪ Case Date: April 8, 2013
+
+• Saunders v. Wilkie, 886 F.3d 1356 (2018)
+    ◦ Case Date: April 3, 2018
+    ◦ While a major case in its own right, Saunders is notable for explicitly overruling Sanchez-Benitez v. West, 13 Vet. App. 282 (1999). Sanchez-Benitez was a widely cited case for a certain proposition, so one thing to look for is how fast citations to Sanchez-Benitez stop after the release of Saunders.
+
+• Golden v. Shulkin, 29 Vet. App. 221 (2018)
+    ◦ Case Date: February 23, 2018
+    ◦ This case itself might not be cited with great frequency, but the holding of it actually meant that the Board should have significantly reduced its citation to Global Assessment of Functioning (GAF) scores from the DSM-IV. So, this case would be an interesting one to examine for a decline in GAF score references following its release.
+
+• Lay evidence cases
+    ◦ The following cases were prominent cases in a long string of cases forcing VA to change its approach to lay evidence. The first three in particular hit in rapid succession (at least it felt that way at the Board). Their holdings are significant and would be in many cases, but it was a difficult adjustment and the Board still errs on them frequently. My personal guess is that we would see a slow increase in citations to these cases, followed by an eventual decline as the holdings continue to be used but without specific citation to them.
+    ◦ Buchanan v. Nicholson, 451 F.3d 1331 (Fed. Cir. 2006)
+        ▪ Case Date: June 14, 2006
+    ◦ Barr v. Nicholson, 21 Vet.App. 303 (2007)
+        ▪ Case Date: June 15, 2007
+    ◦ Jandreau v. Nicholson, 492 F.3d 1372 (Fed. Cir. 2007)
+        ▪ Case Date: July 3, 2007
+    ◦ Davidson v. Shinseki, 581 F.3d 1313 (Fed. Cir. 2009)
+        ▪ Case Date: September 14, 2009
+    ◦ Kahana v. Shinseki, 24 Vet.App. 428 (2011)
+        ▪ Case Date: June 15, 2011
+

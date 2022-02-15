@@ -1,0 +1,11 @@
+cvdisp,cvdisp_label
+1,Affirmed
+5,Dismissed
+6,Reversed
+7,Vacated and Dismissed
+8,Vacated and Remanded
+9,Settlement
+0,Abandoned
+D,Dismissed Death
+N,Not Appealed 
+2,Unknown (Only marked on one case from 2002)

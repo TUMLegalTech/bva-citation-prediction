@@ -1,0 +1,19 @@
+# First line denotes general settings
+# 0: vocab_size
+# 1: cit_as_vocab
+# 2: target
+# 3: text_span
+# 4: forecast_window
+# 5: klist (| separated)
+# 6: max_cit_count
+# 7: max_docs
+25000,1,cit_idx,50,1,1|5|20,100,100
+
+# Each line in the following is one run
+# 0: model
+# 1: features (| separated)
+# 2: n_svm
+simple,,100
+letor,year,100
+letor,year|issarea,100
+letor,year|issarea|vlj,100

@@ -8,6 +8,8 @@ The data is available via the [announcement blog](https://reglab.stanford.edu/da
 
 Below you can find the instructions to recreate the preprocessing. If you want to recreate the models implemented in the paper, you can directly go to the `nlp` folder for more information.
 
+Credit for valuable code scrubbing, testing, and documentation goes to TUM Research Assistant [Sebastian Moser](https://github.com/sebimo).
+
 # Building Citation Vocabulary & Dataset
 You can create a Pytorch [map-like dataset](https://pytorch.org/docs/stable/data.html#map-style-datasets) using the functions provided and illustrated in `dataset_build.py` from a notebook or console.
 ## 1. Setting Paths
